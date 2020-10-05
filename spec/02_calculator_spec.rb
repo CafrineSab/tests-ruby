@@ -1,4 +1,5 @@
-require_relative '../lib/02_calculator'
+ 
+ require_relative '../lib/02_calculator'
 
 describe "add" do
   it "adds 0 and 0" do
@@ -41,29 +42,39 @@ end
 # Let's write some tests !
 # we'll show you the first, you will write the others :)
 
-describe "#multiply" do
+describe "multiply" do
 
   it "multiplies two numbers" do
     expect(multiply(3, 4)).to eq(12)
   end
 
-  it "multiplies two other numbers"
+  it "multiplies two other numbers" do
     # one other test here, don't forget do end ;)
+    expect(multiply(6, 2)).to eq(12)
+  end
 
-  it "multiplies two other numbers, one of them being 0"
+  it "multiplies two other numbers, one of them being 0" do
     # one last test, with 0 in it
+    expect(multiply(0, 7)).to eq(0)
+  end
 
 end
 
-describe "#power" do
+describe "power" do
   it "raises one number to the power of another number"
+  expect(power(3)).to eq(27)
 end
 
 # http://en.wikipedia.org/wiki/Factorial
-describe "#factorial" do
+describe "factorial" do
   it "computes the factorial of 0"
+    expect(factorial(0)).to eq(1)
   it "computes the factorial of 1"
+    expect(factorial(1)).to eq(1)
   it "computes the factorial of 2"
+    expect(factorial(2)).to eq(2)
   it "computes the factorial of 5"
+    expect(factorial(5)).to eq(120)
   it "computes the factorial of 10"
+    expect(factorial(1)).to eq(3628800)
 end
